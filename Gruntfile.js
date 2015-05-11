@@ -24,8 +24,8 @@ module.exports = function(grunt) {
 
 		watch: {
 			scripts: {
-				files: ['assets/css/app.styl'],
-				task: ['stylus']
+				files: ['assets/dev/stylus/app.styl'],
+				tasks: ['stylus']
 			}
 		}
 
@@ -36,7 +36,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['stylus']);
-	grunt.registerTask('watch', ['watch']);
+	grunt.registerTask('default', ['stylus', 'watch']);
 
 };
