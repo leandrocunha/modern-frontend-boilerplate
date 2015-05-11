@@ -9,28 +9,15 @@ module.exports = function(grunt) {
 		
 		pkg: grunt.file.readJSON('package.json'),
 
-		copy: {
-			main: {
-				files: [
-					{
-						expand: true,
-						cwd: 'node_modules/nib/',
-						src: ['index.styl', 'lib/**'],
-						dest: 'assets/css/nib'
-					}
-				]
-			},
-		},
-
 		stylus: {
 			compile: {
 				options: {
 					banner: '/*\n' +
-									'Frontend Boilerplate\n' +
-									'*/'
+							'/* Frontend Boilerplate\n' +
+							'*/'
 				},				
 				files: {
-					'style.css': 'assets/css/app.styl'
+					'assets/css/app.css': 'assets/dev/stylus/app.styl'
 				}
 			}
 		},
@@ -45,12 +32,11 @@ module.exports = function(grunt) {
 	});
 
 	// Load the plugin that provides the "uglify" task.
-	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-stylus');	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['copy', 'stylus']);
+	grunt.registerTask('default', ['stylus']);
 	grunt.registerTask('watch', ['watch']);
 
 };
