@@ -1,0 +1,20 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "Frontend boilerplate",
+  "repository": "https://github.com/leandrocunha",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-less": "*"
+  }
+}
