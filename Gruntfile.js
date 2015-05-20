@@ -34,6 +34,17 @@ module.exports = function(grunt) {
 			}
 		},
 
+		imagemin: {
+			static: {
+				options: {
+					optimizationLevel: 3
+				},
+				files: {
+					'dist/img/gracie-jiu-jitsu.jpg': 'assets/img/gracie-jiu-jitsu.jpg'
+				}
+			}
+		},
+
 		watch: {
 			scripts: {
 				files: ['assets/dev/stylus/app.styl'],
@@ -47,9 +58,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-stylus');	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	// Default task(s).
 	grunt.registerTask('default', ['stylus', 'watch']);
-	grunt.registerTask('build', ['htmlmin']);
+	grunt.registerTask('build', ['htmlmin', 'imagemin']);
 
 };
