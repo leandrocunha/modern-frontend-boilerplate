@@ -11,10 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "grunt": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-stylus": "*",
     "grunt-contrib-concat": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-less": "*"
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
   }
 }

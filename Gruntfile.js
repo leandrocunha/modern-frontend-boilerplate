@@ -9,6 +9,18 @@ module.exports = function(grunt) {
 		
 		pkg: grunt.file.readJSON('package.json'),
 
+		htmlmin: {
+			dist: {
+				options: {
+		        	removeComments: true,
+		        	collapseWhitespace: true
+		      	},	
+		      	files: {
+		        	'dist/index.html': 'index.html'
+		      	}
+		    }
+		},
+
 		stylus: {
 			compile: {
 				options: {
@@ -34,8 +46,10 @@ module.exports = function(grunt) {
 	// Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks('grunt-contrib-stylus');	
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 	// Default task(s).
 	grunt.registerTask('default', ['stylus', 'watch']);
+	grunt.registerTask('build', ['htmlmin']);
 
 };
