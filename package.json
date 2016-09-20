@@ -1,14 +1,14 @@
 {
   "name": "frontend-boilerplate",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Frontend boilerplate",
   "repository": "https://github.com/leandrocunha/modern-frontend-boilerplate",
   "author": "Leandro Cunha",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "3.x",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sourcemaps": "1.x",
-    "gulp-stylus": "2.x"
+    "gulp": "^3",
+    "gulp-livereload": "^3",
+    "gulp-sourcemaps": "^1",
+    "gulp-stylus": "^2"
   }
 }
