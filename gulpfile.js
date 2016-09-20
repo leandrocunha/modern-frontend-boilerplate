@@ -1,8 +1,7 @@
 var gulp      = require('gulp'),
     livereload  = require('gulp-livereload'),
     sourcemaps  = require('gulp-sourcemaps'),
-    stylus 		  = require('gulp-stylus'),
-    uglify      = require('gulp-uglify');
+    stylus 		  = require('gulp-stylus');
 
 var paths = {
 	css: 'assets/css/',
