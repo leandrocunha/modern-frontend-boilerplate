@@ -1,22 +1,11 @@
 {
   "name": "frontend-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Frontend boilerplate",
-  "repository": "https://github.com/leandrocunha",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "grunt": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-htmlmin": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-stylus": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*"
+  "repository": "https://github.com/leandrocunha/modern-frontend-boilerplate",
+  "author": "Leandro Cunha",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "3.x"
   }
 }
