@@ -29,9 +29,23 @@ function buildStylus(options) {
   return build();
 }
 
-gulp.task('somenthing', function() {
-	console.log('Hi, Gulp!')
-});
+function buildStylus(options) {
+  var build = function() {
+    gulp
+     .src(options.src)
+     .pipe(sourcemaps.init())
+     .pipe(stylus({
+        compress: options.uglify,
+        use: [],
+        "include css": options.includeCss
+      }))
+     .pipe(sourcemaps.write('.'))
+     .pipe(gulp.dest(options.dest))
+     .pipe(livereload());
+  }
+
+  return build();
+}
 
 gulp.task('stylus-dev', function() {
   return buildStylus({
@@ -43,10 +57,20 @@ gulp.task('stylus-dev', function() {
   });
 });
 
+gulp.task('stylus', function() {
+  return buildStylus({
+    includeCss: true,
+    dest: paths.css,
+    src: paths.stylus.src,
+    uglify: true,
+    watch: false
+  });
+});
+
 gulp.task( 'watch', function() {
   livereload.listen();
   gulp.watch(paths.stylus.watch, ['stylus-dev']);
 })
 
 gulp.task('default', ['stylus-dev', 'watch']);
-gulp.task('build', ['somenthing']);
+gulp.task('build', ['stylus']);
