@@ -1,0 +1,198 @@
+#hero
+	background-image: url('../img/rio_de_janeiro.jpg')
+	background-size: cover
+	background-position: center
+	position: relative
+	
+	&:before
+		background-color: rgba(0,0,0,.5)
+		content: ''
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 1
+		
+	
+	.quick-links
+		padding-top: 26px
+		position: relative
+		z-index: 2
+		
+		.quick-nav,
+		.user-options
+			list-style: none		
+			
+			li
+				display: inline-block
+				margin: 0 20px 0 0
+				
+				&:last-child
+					margin-right: 0
+				
+				a
+					color: $white
+					
+				.caret
+					color: $white
+					
+		.quick-nav
+			float: left
+		
+		.user-options
+			float: right
+			
+			.flag-brazil
+				a
+					background-image: url('../img/icon-flag-brazil.png')
+					display: inline-block
+					height: 16px
+					text-indent: -5000px
+					width: 22px
+					
+				.caret
+					margin-top: -6px
+					
+	.main-search
+		margin: 155px 0 0 0
+		position: relative
+		z-index: 2
+		
+		.container
+			width: 800px
+		
+			.logotype
+				color: $white
+				font-size: 6rem
+				font-weight: bold
+				text-align: center
+				text-transform: uppercase
+				
+			.headline
+				color: $white
+				font-size: 3rem
+				font-weight: 100
+				letter-spacing: 2.3px
+				margin: 20px 0
+				text-align: center
+				
+			.services
+				> p
+					background-color: $gold
+					color: $mine-shaft
+					font-weight: bold
+					margin: 0
+					padding: 2px 0
+					text-align: center
+					text-transform: lowercase
+					
+				.services-list
+					background-color: $mine-shaft
+					margin: 0
+					padding: 8px 0
+					
+					&:after
+						content: ''
+						clear: both
+						display: block
+					
+					li						
+						color: $silver
+						display: block
+						float: left
+						font-size: .8rem
+						list-style: none
+						letter-spacing: .4px
+						text-align: center
+						text-transform: uppercase
+						width: 11.111%
+						
+						.fa,
+						span
+							display: block
+							
+						.fa
+							color: $gold							
+							font-size: 3rem
+							padding: 2px 0 5px 0
+							
+				.form-search
+					background-color: $white
+					height: 90px
+					position: relative
+					
+					.form-group
+						border-right: $mercury 1px solid
+						padding: 15px
+						
+						&:last-child
+							border-right: none
+							position: absolute;
+							padding: 0;
+							width: 62px;
+							height: 90px;
+							
+							.btn
+								border: none
+								background-color: $yellow-orange
+								border-radius: 0
+								width: 100%;
+								height: 100%;
+								
+								.fa,
+								span
+									display: block
+									
+								.fa
+									font-size: 2.5rem
+							
+						&.location
+							.form-control
+								color: $yellow-orange
+								font-size: 2.2rem
+								font-weight: 100
+								letter-spacing: 1px
+								width: 236px
+								
+						&.checkin-out
+							.form-control
+								color: $gray
+								font-size: 2.2rem
+								font-weight: 100
+								letter-spacing: 1px
+								width: 130px
+						
+						label
+							color: $gray
+							display: block
+							font-size: 1.2rem
+							font-weight: 300
+							letter-spacing: .5px
+							
+							.fa
+								font-size: 1.4rem
+								
+						.form-control
+							border: none
+							box-shadow: none
+							outline: none
+							padding: 0
+							
+			> .location
+				margin: 150px 0 30px 0
+				text-align: right
+				
+				.city,
+				.country
+					color: $white
+					font-weight: 100
+					letter-spacing: 1px
+					line-height: 1em
+					margin: 0
+					
+				.city
+					font-size: 2.4rem
+					
+				.country
+					font-size: 1.8rem
