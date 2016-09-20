@@ -1,0 +1,17 @@
+{
+  "name": "frontend-boilerplate",
+  "description": "Frontend boilerplate",
+  "main": "",
+  "authors": [
+    "Leandro Cunha"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leandrocunha/modern-frontend-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
