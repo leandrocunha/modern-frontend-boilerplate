@@ -1,7 +1,8 @@
-var gulp 		= require('gulp'),
-	livereload  = require('gulp-livereload'),
-	sourcemaps  = require('gulp-sourcemaps'),
-	stylus 		= require('gulp-stylus');
+var gulp      = require('gulp'),
+    livereload  = require('gulp-livereload'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    stylus 		  = require('gulp-stylus'),
+    uglify      = require('gulp-uglify');
 
 var paths = {
 	css: 'assets/css/',
@@ -10,24 +11,6 @@ var paths = {
 		watch: 'src/stylus/**/*.styl'
 	}
 };
-
-function buildStylus(options) {
-  var build = function() {
-    gulp
-     .src(options.src)
-     .pipe(sourcemaps.init())
-     .pipe(stylus({
-        compress: options.uglify,
-        use: [],
-        "include css": options.includeCss
-      }))
-     .pipe(sourcemaps.write('.'))
-     .pipe(gulp.dest(options.dest))
-     .pipe(livereload());
-  }
-
-  return build();
-}
 
 function buildStylus(options) {
   var build = function() {

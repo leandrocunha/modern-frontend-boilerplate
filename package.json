@@ -1,6 +1,6 @@
 {
   "name": "frontend-boilerplate",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Frontend boilerplate",
   "repository": "https://github.com/leandrocunha/modern-frontend-boilerplate",
   "author": "Leandro Cunha",
@@ -9,6 +9,7 @@
     "gulp": "3.x",
     "gulp-livereload": "^3.8.1",
     "gulp-sourcemaps": "1.x",
-    "gulp-stylus": "2.x"
+    "gulp-stylus": "2.x",
+    "gulp-uglify": "^2.0.0"
   }
 }
